@@ -1,0 +1,44 @@
+#+TITLE: ES118 Assignment #3
+#+AUTHOR: Ufuk Baler, MSc. & Asst. Prof. Dr. Fethi Okyar
+#+SUBTITLE: 
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%a</h4> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil reveal_global_footer:nil
+#+REVEAL_EXTRA_CSS: ../codestyle.css
+#+LATEX_HEADER: \usepackage{amsmath}
+
+Put your code under the solution sections given in the script called ~assignment3.py~.
+
+In an experiment given in *Jiaqi V. Huang, Yiran Wei, & Holger G. Krapp. (2019). Robot trajectory data for "Biohybrid Fly-Robot Interface system performs active collision avoidance" (1.0.0) [Data set]. Zenodo.* https://doi.org/10.5281/zenodo.3355278, a robot was moving inside closed environment. The robot was expected not to collide with the 90deg walls which are perpendicular to the planar surface on where the motion of the robot occured. Head (front) and tail (back) of the robot is shown in the figure below:
+
+#+ATTR_HTML: :width 400px
+[[./path1.png]]
+
+$\theta$ (theta) is the orientation of the robot in 2D plane. Your aim is to generate the exact same subplots as given below:
+
+#+ATTR_HTML: :width 800px
+[[./Figure_1.png]]
+
+Use arrays defined with NumPy. Do not use any loops. Use ~matplotlib~ for plotting.
+
+Steps in a summary:
+1. load the csv file in this repository to a variable called ~data~
+2. create a 1x2 subplots where:
+   
+   2.1. the first subplot holds x and y positions of tail and head of the robot
+   
+   2.2. the second subplot holds frames vs the orientation of the robot 
+
+The orientation is calculated as
+
+#+ATTR_HTML: :width 200px
+[[./equation.png]]
+
+where
+- $\texttt{head}_x$: x-location of the head in unit-length
+- $\texttt{head}_y$: y-location of the head in unit-length
+- $\texttt{tail}_x$: x-location of the tail in unit-length
+- $\texttt{tail}_y$: y-location of the tail in unit-length
+- $\theta$: orientation of the robot in radians  
